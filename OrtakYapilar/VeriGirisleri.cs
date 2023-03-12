@@ -2,6 +2,21 @@
 {
     public static class VeriGirisleri
     {
+        public static void VeriAlDouble(out double sayi, string mesaj = "Bir ondalıklı sayı giriniz: ")
+        {
+            try
+            {
+                sayi = default;
+                Console.Write(mesaj);
+                sayi = Convert.ToDouble(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(OrtakYapilarMesajlar.ConvertToDoubleHatasi);
+                throw;
+            }
+        }
+
         /// <summary>
         /// Bir tam sayı almak için kullanılmaktadır. Kullanıcı tam sayı girmezse hata verir.
         /// </summary>
@@ -39,6 +54,31 @@
             {
                 Console.WriteLine(OrtakYapilarMesajlar.ConvertToUInt32Hatasi);
                 throw;
+            }
+        }
+
+        public static void VerilerAlDouble(out List<double> sayilar, string mesaj = "Bir ondalıklı sayı giriniz:")
+        {
+            sayilar = new();
+            try
+            {
+                Console.WriteLine("Bir ondalıklı sayı girilmediğinde veri alma bırakılacaktır...");
+                while (true)
+                {
+                    Console.Write(mesaj);
+                    sayilar.Add(Convert.ToDouble(Console.ReadLine()));
+
+                }
+            }
+            catch (Exception)
+            {
+                if (sayilar.Any())
+                    Console.WriteLine(OrtakYapilarMesajlar.VeriGirisiTamam);
+                else
+                {
+                    Console.WriteLine(OrtakYapilarMesajlar.ConvertToDoubleHatasi);
+                    throw;
+                }
             }
         }
 
