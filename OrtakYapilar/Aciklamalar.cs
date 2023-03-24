@@ -10,7 +10,7 @@
 
 3. yöntemde ebob hesaplamak için Öklid yöntemi kullanılmıştır. Bu yöntem, iteratif(iterative) yaklaşımla kodlanmıştır. 
 ";
-
+        public const string mukemmelSayi = @"Kendisi hariç tam bölenlerinin toplamı kendisine eşit olan sayılara ""Mükemmel Sayı"" denmektedir.";
     }
 }
 
