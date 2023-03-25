@@ -68,13 +68,13 @@
         /// </summary>
         /// <param name="pozitifSayi">Pozitif bir tam sayı</param>
         /// <returns>Bulunan mükemmel sayıların listesi</returns>
-        public List<uint> SayiyaKadarMukemmelSayilar(uint pozitifSayi)
+        public List<ulong> SayiyaKadarMukemmelSayilar(ulong pozitifSayi)
         {
-            List<uint> mukemmelSayilar = new();
-            for (uint sayi = 1; sayi < pozitifSayi; sayi++)
+            List<ulong> mukemmelSayilar = new();
+            for (ulong sayi = 1; sayi < pozitifSayi; sayi++)
             {
-                uint toplam = 0;
-                for (uint j = 1; j < sayi; j++)
+                ulong toplam = 0;
+                for (ulong j = 1; j < sayi; j++)
                 {
                     if (sayi % j == 0)
                         toplam += j;

@@ -56,8 +56,8 @@ try
         {
             Console.WriteLine(Aciklamalar.mukemmelSayi);
             Console.WriteLine();
-            VeriGirisleri.VeriAlUint(out uint pozitifSayi, "Bir pozitif tam sayı giriniz: ");
-            List<uint> mukemmelSayilar = uygulamalar.SayiyaKadarMukemmelSayilar(pozitifSayi);
+            VeriGirisleri.VeriAlUlong(out ulong pozitifSayi, "Bir pozitif tam sayı giriniz: ");
+            List<ulong> mukemmelSayilar = uygulamalar.SayiyaKadarMukemmelSayilar(pozitifSayi);
             Console.WriteLine($"Girilen {pozitifSayi} kadar olan mükemmel sayılar aşağıdadır:");
             if (mukemmelSayilar.Any())
             {

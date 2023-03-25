@@ -106,5 +106,21 @@
                 }
             }
         }
+
+        public static void VeriAlUlong(out ulong sayi, string mesaj = "Bir pozitif tam sayı giriniz: ")
+        {
+            try
+            {
+                sayi = default;
+                Console.Write(mesaj);
+                sayi = Convert.ToUInt64(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(OrtakYapilarMesajlar.ConvertToUInt64Hatasi);
+                throw;
+            }
+        }
+
     }
 }
