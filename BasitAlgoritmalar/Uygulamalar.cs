@@ -84,5 +84,19 @@
             }
             return mukemmelSayilar;
         }
+
+        public long SayininRakamlariToplaminiBulma(int sayi)
+        {
+            if (sayi < 0)
+                sayi *= (-1);
+
+            long toplam = default;
+            while (sayi > 0)
+            {
+                toplam += sayi % 10;
+                sayi = sayi / 10;
+            }
+            return toplam;
+        }
     }
 }

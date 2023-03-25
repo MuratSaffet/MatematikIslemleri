@@ -10,6 +10,7 @@ menu.Add("2-Girilen pozitif tam sayıya(dahil) kadar olan sayıların toplamın�
 menu.Add("3-Girilen pozitif tam sayıya(dahil) kadar olan TEK sayıların toplamını bulma");
 menu.Add("4-Girilen pozitif tam sayıya(dahil) kadar olan ÇİFT sayıların toplamını bulma");
 menu.Add("5-Girilen pozitif tam sayıya(dahil) kadar olan mükemmel sayıları bulma");
+menu.Add("6-Girilen bir tam sayının rakamları toplamını bulma");
 menu.Add("Yapmak istediğiniz işlemin sıra numarasını giriniz: ");
 
 string secim = string.Empty;
@@ -70,6 +71,11 @@ try
             {
                 Console.WriteLine("Mükemmel sayı bulunamadı!");
             }
+        }
+        else if (secim.Equals("6"))
+        {
+            VeriGirisleri.VeriAlInt(out int sayi, "Bir tam sayı giriniz: ");
+            Console.WriteLine($"Girilen {sayi} rakamları toplamı : {uygulamalar.SayininRakamlariToplaminiBulma(sayi)}");
         }
         else
         {
