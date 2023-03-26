@@ -1,7 +1,5 @@
 ﻿using BasitAlgoritmalar;
 using OrtakYapilar;
-using System.Diagnostics.Contracts;
-using System.Security;
 
 List<string> menu = new();
 menu.Add("Basit Algoritmalar");
@@ -11,6 +9,8 @@ menu.Add("3-Girilen pozitif tam sayıya(dahil) kadar olan TEK sayıların toplam
 menu.Add("4-Girilen pozitif tam sayıya(dahil) kadar olan ÇİFT sayıların toplamını bulma");
 menu.Add("5-Girilen pozitif tam sayıya(dahil) kadar olan mükemmel sayıları bulma");
 menu.Add("6-Girilen bir tam sayının rakamları toplamını bulma");
+menu.Add("7-Girilen bir tam sayının rakamlarını tersine çevirme");
+menu.Add("8-Tam sayı dizisindeki en büyük sayıyı bulma");
 menu.Add("Yapmak istediğiniz işlemin sıra numarasını giriniz: ");
 
 string secim = string.Empty;
@@ -76,6 +76,22 @@ try
         {
             VeriGirisleri.VeriAlInt(out int sayi, "Bir tam sayı giriniz: ");
             Console.WriteLine($"Girilen {sayi} rakamları toplamı : {uygulamalar.SayininRakamlariToplaminiBulma(sayi)}");
+        }
+        else if (secim.Equals("7"))
+        {
+            VeriGirisleri.VeriAlInt(out int sayi);
+            Console.WriteLine($"Girilen {sayi} sayısının rakamlarının tersine çevrilmiş hali : {uygulamalar.SayininRakamlariniTersineCevirme(sayi)}");
+        }
+        else if (secim.Equals("8"))
+        {
+            VeriGirisleri.VerilerAlInt(out List<int> sayiList);
+            Console.WriteLine("Girilen");
+            foreach (var sayi in sayiList.GetRange(0, sayiList.Count - 1))
+            {
+                Console.Write($"{sayi}, ");
+            }
+            Console.WriteLine(sayiList[^1]);
+            Console.WriteLine($"dizisindeki en büyük sayı : {uygulamalar.BuyukSayiyiBulma(sayiList)}");
         }
         else
         {

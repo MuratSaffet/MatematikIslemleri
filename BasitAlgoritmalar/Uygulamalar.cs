@@ -41,7 +41,7 @@
             uint toplamTek = 0;
             for (uint i = 1; i <= pozitifSayi; i++)
             {
-                if(i%2!=0)
+                if (i % 2 != 0)
                     toplamTek += i;
             }
             return toplamTek;
@@ -85,6 +85,11 @@
             return mukemmelSayilar;
         }
 
+        /// <summary>
+        /// Sayının rakamları toplamını bulma
+        /// </summary>
+        /// <param name="sayi">Bir tam sayı</param>
+        /// <returns>Sayının rakamları toplamı</returns>
         public long SayininRakamlariToplaminiBulma(int sayi)
         {
             if (sayi < 0)
@@ -97,6 +102,50 @@
                 sayi = sayi / 10;
             }
             return toplam;
+        }
+
+        /// <summary>
+        /// Sayının rakamlarını tersine çevirme
+        /// </summary>
+        /// <param name="sayi">Bir tam sayı</param>
+        /// <returns>Sayının rakamlarının tersine çevrilmiş hali</returns>
+        public int SayininRakamlariniTersineCevirme(int sayi)
+        {
+            int sonuc = default;
+            bool pozitif = true;
+
+            if (sayi < 0)
+            {
+                pozitif = false;
+                sayi *= (-1);
+            }
+
+            while (sayi > 0)
+            {
+                sonuc = ((sonuc * 10) + (sayi % 10));
+                sayi /= 10;
+            }
+
+            if (!pozitif)
+                sonuc *= (-1);
+
+            return sonuc;
+        }
+    
+        /// <summary>
+        /// Alınan sayi dizisindeki en büyük sayıyı bulma
+        /// </summary>
+        /// <param name="sayiList">Sayi dizisi</param>
+        /// <returns>Büyük sayi</returns>
+        public int BuyukSayiyiBulma(List<int> sayiList)
+        {
+            int buyuk = sayiList[0];
+            foreach (var sayi in sayiList.GetRange(1,sayiList.Count-1))
+            {
+                if (sayi > buyuk)
+                    buyuk = sayi;
+            }
+            return buyuk;
         }
     }
 }

@@ -122,5 +122,30 @@
             }
         }
 
+        public static void VerilerAlInt(out List<int> sayilar, string mesaj = "Bir tam sayı giriniz:")
+        {
+            sayilar = new();
+            try
+            {
+                Console.WriteLine("Bir tam sayı girilmediğinde veri alma bırakılacaktır...");
+                while (true)
+                {
+                    Console.Write(mesaj);
+                    sayilar.Add(Convert.ToInt32(Console.ReadLine()));
+
+                }
+            }
+            catch (Exception)
+            {
+                if (sayilar.Any())
+                    Console.WriteLine(OrtakYapilarMesajlar.VeriGirisiTamam);
+                else
+                {
+                    Console.WriteLine(OrtakYapilarMesajlar.ConvertToInt32Hatasi);
+                    throw;
+                }
+            }
+        }
+
     }
 }
