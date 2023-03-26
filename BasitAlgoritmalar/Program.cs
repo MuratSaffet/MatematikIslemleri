@@ -11,6 +11,8 @@ menu.Add("5-Girilen pozitif tam sayıya(dahil) kadar olan mükemmel sayıları b
 menu.Add("6-Girilen bir tam sayının rakamları toplamını bulma");
 menu.Add("7-Girilen bir tam sayının rakamlarını tersine çevirme");
 menu.Add("8-Tam sayı dizisindeki en büyük sayıyı bulma");
+menu.Add("9-İki tam sayı ve bu iki tam sayı arasındaki sayılarının toplamını bulma");
+menu.Add("10-İki tam sayı ve bu iki tam sayı arasındaki sayılarının çarpımını bulma");
 menu.Add("Yapmak istediğiniz işlemin sıra numarasını giriniz: ");
 
 string secim = string.Empty;
@@ -92,6 +94,20 @@ try
             }
             Console.WriteLine(sayiList[^1]);
             Console.WriteLine($"dizisindeki en büyük sayı : {uygulamalar.BuyukSayiyiBulma(sayiList)}");
+        }
+        else if (secim.Equals("9"))
+        {
+            VeriGirisleri.VeriAlInt(out int ilkSayi, "İlk sayıyı giriniz: ");
+            VeriGirisleri.VeriAlInt(out int ikinciSayi, "İkinci sayıyı giriniz: ");
+
+            Console.WriteLine($"[{ilkSayi} - {ikinciSayi}] arasındaki sayıların toplamı: {uygulamalar.IkiTamSayiArasiToplam(ilkSayi, ikinciSayi)}");
+        }
+        else if (secim.Equals("10"))
+        {
+            VeriGirisleri.VeriAlInt(out int ilkSayi, "İlk sayıyı giriniz: ");
+            VeriGirisleri.VeriAlInt(out int ikinciSayi, "İkinci sayıyı giriniz: ");
+
+            Console.WriteLine($"[{ilkSayi} - {ikinciSayi}] arasındaki sayıların çarpımı: {uygulamalar.IkiTamSayiArasiCarpim(ilkSayi, ikinciSayi)}");
         }
         else
         {

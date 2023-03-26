@@ -147,5 +147,55 @@
             }
             return buyuk;
         }
+
+        /// <summary>
+        /// İki tam sayı ve bu iki tam sayı arasındaki sayılarının toplamını bulma
+        /// </summary>
+        /// <param name="ilkSayi"></param>
+        /// <param name="ikinciSayi"></param>
+        /// <returns>Toplam Sonucu</returns>
+        public int IkiTamSayiArasiToplam(int ilkSayi, int ikinciSayi)
+        {
+            int buyuk = ilkSayi;
+            int kucuk = ikinciSayi;
+            if (ilkSayi < ikinciSayi)
+            {
+                kucuk = ilkSayi;
+                buyuk = ikinciSayi;
+            }
+
+            int toplam = default;
+            for (int i = kucuk; i <= buyuk; i++)
+            {
+                toplam += i;
+            }
+
+            return toplam;
+        }
+
+        /// <summary>
+        /// İki tam sayı ve bu iki tam sayı arasındaki sayılarının çarpımını bulma
+        /// </summary>
+        /// <param name="ilkSayi"></param>
+        /// <param name="ikinciSayi"></param>
+        /// <returns>Çarpım Sonucu</returns>
+        public int IkiTamSayiArasiCarpim(int ilkSayi, int ikinciSayi)
+        {
+            int buyuk = ilkSayi;
+            int kucuk = ikinciSayi;
+            if (ilkSayi < ikinciSayi)
+            {
+                kucuk = ilkSayi;
+                buyuk = ikinciSayi;
+            }
+
+            int toplam = 1;
+            for (int i = kucuk; i <= buyuk; i++)
+            {
+                toplam *= i;
+            }
+
+            return toplam;
+        }
     }
 }
