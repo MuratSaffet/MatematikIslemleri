@@ -197,5 +197,21 @@
 
             return toplam;
         }
+
+        /// <summary>
+        /// Bir tamsayının faktöriyelini hesaplama
+        /// </summary>
+        /// <param name="sayi">Faktöriyeli hesaplanacak tamsayı</param>
+        /// <returns></returns>
+        public int FaktoriyelHesaplama(uint sayi)
+        {
+            int sonuc = 1;
+            for (int i = 1; i <= sayi; i++)
+            {
+                sonuc *= i;
+            }
+
+            return sonuc;
+        }
     }
 }

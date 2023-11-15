@@ -13,6 +13,7 @@ menu.Add("7-Girilen bir tam sayının rakamlarını tersine çevirme");
 menu.Add("8-Tam sayı dizisindeki en büyük sayıyı bulma");
 menu.Add("9-İki tam sayı ve bu iki tam sayı arasındaki sayılarının toplamını bulma");
 menu.Add("10-İki tam sayı ve bu iki tam sayı arasındaki sayılarının çarpımını bulma");
+menu.Add("11-Bir tamsayının faktöriyelini hesaplama");
 menu.Add("Yapmak istediğiniz işlemin sıra numarasını giriniz: ");
 
 string secim = string.Empty;
@@ -108,6 +109,12 @@ try
             VeriGirisleri.VeriAlInt(out int ikinciSayi, "İkinci sayıyı giriniz: ");
 
             Console.WriteLine($"[{ilkSayi} - {ikinciSayi}] arasındaki sayıların çarpımı: {uygulamalar.IkiTamSayiArasiCarpim(ilkSayi, ikinciSayi)}");
+        }
+        else if (secim.Equals("11"))
+        {
+            VeriGirisleri.VeriAlUint(out uint sayi, "Bir tamsayı giriniz: ");
+
+            Console.WriteLine($"{sayi} sayısının faktoriyeli : {uygulamalar.FaktoriyelHesaplama(sayi)}");
         }
         else
         {
