@@ -7,4 +7,5 @@ Basit matematiksel yöntemler/algoritmalar için C# konsol uygulamasıdır. Kodl
 5- Girilen pozitif tam sayıya(dahil) kadar olan sayıların toplamını bulma<br/>
 6- Girilen pozitif tam sayıya(dahil) kadar olan TEK sayıların toplamını bulma<br/>
 7- Girilen pozitif tam sayıya(dahil) kadar olan ÇİFT sayıların toplamını bulma<br/>
-8- Girilen pozitif tam sayıya(dahil) kadar olan mükemmel sayıları bulma
+8- Girilen pozitif tam sayıya(dahil) kadar olan mükemmel sayıları bulma<br/>
+9- Girilen pozitif tam sayının faktöriyelini hesaplama
